@@ -39,7 +39,7 @@ In certain environments, there may be an issue with the Gradle version number. T
 java.lang.NoClassDefFoundError: Could not initialize class org.codehaus.groovy.vmplugin.v7.Java7
 ```
 
-If this is the case, you must upgrade the Gradle version to 6.3 in `/android/grade/wrapper/grade-wrapper.properties`. Change the version like so:
+If this is the case, you must upgrade the Gradle version to 6.3 in `/android/gradle/wrapper/gradle-wrapper.properties`. Change the version like so:
 ```
 distributionUrl=https\://services.gradle.org/distributions/gradle-6.3-all.zip
 ```
@@ -87,7 +87,6 @@ Next connect your iPhone with a cable to your computer. Then run the following c
 
 You should be able to run it on your phone.
 
-[![CircleCI](https://circleci.com/gh/infinitered/ignite-bowser.svg?style=svg)](https://circleci.com/gh/infinitered/ignite-bowser)
 
 ## Environment variables
 
