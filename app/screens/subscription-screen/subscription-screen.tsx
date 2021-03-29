@@ -34,7 +34,7 @@ export const SubscriptionScreen = observer(function SubscriptionScreen() {
   return (
     <View style={{ flex: 1, backgroundColor: "white" }}>
       <Screen style={CONTAINER} preset="fixed" backgroundColor={color.transparent}>
-        <View style={{ flexDirection: "row", alignItems: "center" }}>
+        <View style={{ flexDirection: "row", alignItems: "center", marginTop: 25 }}>
           <Image source={Logo} />
           <View style={{ flex: 1 }} />
           <Avatar
@@ -43,6 +43,10 @@ export const SubscriptionScreen = observer(function SubscriptionScreen() {
             icon={{ name: "user", type: "font-awesome" }}
             source={{
               uri: rootStore.avatarUrl,
+            }}
+            onPress={async () => {
+              ProtonSDK.logout()
+              navigation.navigate("welcome")
             }}
           />
         </View>

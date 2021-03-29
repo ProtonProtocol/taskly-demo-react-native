@@ -20,7 +20,7 @@ export const TaskScreen = observer(function TaskScreen() {
   return (
     <View style={{ flex: 1, backgroundColor: "white" }}>
       <Screen preset="fixed" backgroundColor={color.transparent}>
-        <View style={{ flexDirection: "row", alignItems: "center" }}>
+        <View style={{ flexDirection: "row", alignItems: "center", marginTop: 25 }}>
           <Image source={Logo} />
           <View style={{ flex: 1 }} />
           <Avatar
@@ -29,6 +29,10 @@ export const TaskScreen = observer(function TaskScreen() {
             icon={{ name: "user", type: "font-awesome" }}
             source={{
               uri: rootStore.avatarUrl,
+            }}
+            onPress={async () => {
+              ProtonSDK.logout()
+              navigation.navigate("welcome")
             }}
           />
         </View>

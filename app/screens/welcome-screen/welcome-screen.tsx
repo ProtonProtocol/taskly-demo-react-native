@@ -20,7 +20,7 @@ export const WelcomeScreen = observer(function WelcomeScreen() {
   return (
     <View style={{ flex: 1, backgroundColor: "white" }}>
       <Screen preset="fixed" backgroundColor={color.transparent}>
-        <View style={{ flexDirection: "row" }}>
+        <View style={{ flexDirection: "row", marginTop: 25 }}>
           <Image source={Logo} />
           <View style={{ flex: 1 }} />
           <Image source={Hamburger} />
