@@ -61,33 +61,41 @@ Since this project is an iOS App, a Mac is necessary.
 Install the following requirements.
 
 1. Install XCode and make sure you have version (12.2).
-2. Install the Xcode command line tools by runnning `xcode-select --install` in the terminal
-3. Install CocoaPods (https://cocoapods.org/) by running `sudo gem install cocoapods`
-4. Install homebrew by follwing the instructions on https://brew.sh/.
-5. Run `brew install watchman` to install watchman
+2. Install the Xcode command line tools by runnning `xcode-select --install` in the terminal.
+3. Install CocoaPods (https://cocoapods.org/) by running `sudo gem install cocoapods`.
+4. Install homebrew by following the instructions on https://brew.sh/.
+5. Run `brew install watchman` to install watchman.
 
 We use Node version v10 to v11. Make sure [https://nodejs.org/en/](Node) and [https://yarnpkg.com/]Yarn are installed.
 
-To run the app on a simulator:
-1. open ios/TasklyIos.xcworkspace/
-2. select "Taskly iOS Develop" scheme
-3. select "iPhone 11" as a simulator
-4. Click the run button
+## To run the app on a simulator:
+
+1. Install the application's packages by running `yarn`
+2. Create an `.env` file based on the `.env.template`.
+3. Start the react-native dev server by running `yarn start`.
+4. Start up xcode by running `open ios/TasklyIos.xcworkspace/` in another tab.
+5. Select **Taskly iOS Dev** scheme.
+6. Select **iPhone 11** as a simulator.
+7. Click the run button.
 
 The first time the app builds can take quite some time (maybe 10 minutes) depending on the number of cores and other functionality. While the app is building, a new terminal will popup that has the dev server running. Please do not close this window while the simulator is running.
 
-When you want to run on a physical device, open Xcode and click on Preferences and add your account there.
+## When you want to run on a physical device:
 
-Next connect your iPhone with a cable to your computer. Then run the following commands:
+1. Open the xcode **Preferences** menu and select the **Accounts** tab to add your account (i.e. Apple ID of your device).
+2. In xcode, open the `TasklyIos.xcodeproj` file.
+3. Select `TasklyIos` listed under **Targets**.
+4. Under the **Signing & Capabilities** tab, expand the **Signing (Debug)** options and use the **Team** dropdown to select the xcode account you just created in the first step.
+5. Name your **Bundle Identifier** (note that this name needs to be unique).
+6. Quit xcode.
+7. Connect your iPhone with a cable to your computer.
+8. Install the application's packages by running `yarn`
+9. Create an `.env` file based on the `.env.template`.
+10. Start the react-native dev server by running `yarn start`.
+11. Restart xcode by running `open ios/TasklyIos.xcworkspace/` in another tab.
+12. Select **Taskly iOS Dev** scheme.
+13. Select **YourName's Phone** as the iOS device.
+14. Click the run button.
+15. After the application has finished building, open your iPhone's **General** settings and scroll down to **Device Management**. Open the option under **DEVELOPER APP** and select **Trust "Apple Development: ...** to mark your xcode developer account as trusted.
 
-1. open ios/TasklyIos.xcworkspace/
-2. select "Taskly iOS Develop" scheme
-3. select "YourName's Phone"
-4. Click the run button
-
-You should be able to run it on your phone.
-
-
-## Environment variables
-
-To change the chain that the demo is connected to change the .env file. The current value of .env file is equal to the content of .env.production. There is an additional file .env.local for the test environment.
+After granting trust to your developer account, click the run button again. The application should appear on your phone.

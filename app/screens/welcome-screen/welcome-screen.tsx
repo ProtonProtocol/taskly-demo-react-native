@@ -6,7 +6,6 @@ import React from "react"
 import { Screen } from "../../components"
 import { Title } from "./welcome-screen.styled"
 import { color } from "../../theme"
-import Hamburger from "./hamburger.png"
 import Logo from "./logo.png"
 import ProtonSDK from "../../utils/ProtonSDK"
 import { useStores } from "../../models"
@@ -20,10 +19,9 @@ export const WelcomeScreen = observer(function WelcomeScreen() {
   return (
     <View style={{ flex: 1, backgroundColor: "white" }}>
       <Screen preset="fixed" backgroundColor={color.transparent}>
-        <View style={{ flexDirection: "row" }}>
+        <View style={{ flexDirection: "row", marginTop: 25 }}>
           <Image source={Logo} />
           <View style={{ flex: 1 }} />
-          <Image source={Hamburger} />
         </View>
         <View style={{ height: 170 }} />
         <Title>Get a virtual assistant organize like never before</Title>
