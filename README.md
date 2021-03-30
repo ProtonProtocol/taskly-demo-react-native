@@ -98,4 +98,4 @@ The first time the app builds can take quite some time (maybe 10 minutes) depend
 14. Click the run button.
 15. After the application has finished building, open your iPhone's **General** settings and scroll down to **Device Management**. Open the option under **DEVELOPER APP** and select **Trust "Apple Development: ...** to mark your xcode developer account as trusted.
 
-After granting trust to your developer account, the application should appear and launch on your phone.
+After granting trust to your developer account, click the run button again. The application should appear on your phone.
